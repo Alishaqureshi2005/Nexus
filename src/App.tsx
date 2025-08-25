@@ -29,6 +29,7 @@ import { DealsPage } from './pages/deals/DealsPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
+import { Calender } from './components/calender';
 
 function App() {
   return (
@@ -90,12 +91,18 @@ function App() {
             <Route path=":userId" element={<ChatPage />} />
           </Route>
           
+          {/*calender route  */}
+            <Route path="/calender" element={<DashboardLayout />}>
+            <Route index element={<Calender />} />
+            <Route path=":userId" element={<Calender />} />
+          </Route>
           {/* Redirect root to login */}
           <Route path="/" element={<Navigate to="/login" replace />} />
           
           {/* Catch all other routes and redirect to login */}
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
+
       </Router>
     </AuthProvider>
   );
