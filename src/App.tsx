@@ -29,7 +29,12 @@ import { DealsPage } from './pages/deals/DealsPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
-import { Calender } from './components/calender';
+import Calender  from './components/calender';
+import VideoCallPage from './pages/videocall';
+import DocumentChamber from './pages/documentchamber';
+import Wallet  from './pages/wallet';
+import OTPVerification from './pages/Otpverification';
+import Walkthrough from './pages/walkthrough';
 
 function App() {
   return (
@@ -95,6 +100,31 @@ function App() {
             <Route path="/calender" element={<DashboardLayout />}>
             <Route index element={<Calender />} />
             <Route path=":userId" element={<Calender />} />
+          </Route>
+          {/* videocall */}
+            <Route path="/videocall" element={<DashboardLayout />}>
+            <Route index element={<VideoCallPage />} />
+            <Route path=":userId" element={<VideoCallPage/>} />
+          </Route>
+          {/* documentchamber */}
+            <Route path="/documentchamber" element={<DashboardLayout/>}>
+            <Route index element={<DocumentChamber />} />
+            <Route path=":userId" element={<DocumentChamber/>} />
+          </Route>
+          {/* Wallet */}
+            <Route path="/waallet" element={<DashboardLayout />}>
+            <Route index element={<Wallet />} />
+            <Route path=":userId" element={<Wallet/>} />
+          </Route>
+          {/*otpverfication  */}
+            <Route path="/Otpverification" element={<DashboardLayout/>}>
+            <Route index element={<OTPVerification />} />
+            <Route path=":userId" element={<OTPVerification/>} />
+          </Route>
+          {/*  */}
+             <Route path="/walkthrough" element={<DashboardLayout/>}>
+            <Route index element={<Walkthrough />} />
+            <Route path=":userId" element={<Walkthrough/>} />
           </Route>
           {/* Redirect root to login */}
           <Route path="/" element={<Navigate to="/login" replace />} />

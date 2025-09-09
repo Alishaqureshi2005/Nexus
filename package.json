@@ -12,7 +12,9 @@
   "dependencies": {
     "@fullcalendar/core": "^6.1.19",
     "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/interaction": "^6.1.19",
     "@fullcalendar/react": "^6.1.19",
+    "@fullcalendar/timegrid": "^6.1.19",
     "axios": "^1.6.7",
     "date-fns": "^3.3.1",
     "lucide-react": "^0.344.0",
@@ -20,7 +22,10 @@
     "react-dom": "^18.3.1",
     "react-dropzone": "^14.2.3",
     "react-hot-toast": "^2.4.1",
-    "react-router-dom": "^6.22.1"
+    "react-joyride": "^2.9.3",
+    "react-router-dom": "^6.22.1",
+    "react-webcam": "^7.2.0",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
